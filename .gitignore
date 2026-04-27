@@ -1,0 +1,33 @@
+# datasets
+all_data/
+clean_coco/
+dataset/
+datas/
+images/
+labels/
+
+# weights
+*.pt
+*.pth
+*.onnx
+
+# logs
+runs/
+runs_*/
+rfdetr_runs*/
+*.log
+mlruns/
+mlartifacts/
+mlflow.db
+
+# env
+.venv/
+venv/
+miniconda3/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# system
+.vscode/
+.DS_Store

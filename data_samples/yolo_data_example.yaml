@@ -1,0 +1,6 @@
+path: data_samples/yolo_demo
+train: images/train
+val: images/val
+
+names:
+  0: traffic_light

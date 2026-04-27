@@ -1,0 +1,38 @@
+task: detect
+framework: ultralytics
+model: yolo26m.pt
+
+dataset:
+  source_format: COCO
+  training_format: YOLO
+  data_yaml: data_samples/yolo_data_example.yaml
+
+training:
+  epochs: 200
+  imgsz: 1280
+  batch: 4
+  workers: 4
+  optimizer: AdamW
+  lr0: 0.0006
+  lrf: 0.01
+  weight_decay: 0.01
+  warmup_epochs: 3.0
+  cos_lr: true
+  patience: 50
+
+augmentation:
+  hsv_h: 0.015
+  hsv_s: 0.70
+  hsv_v: 0.50
+  mosaic: 0.15
+  mixup: 0.05
+  copy_paste: 0.05
+  close_mosaic: 15
+  translate: 0.08
+  scale: 0.5
+  perspective: 0.0005
+  erasing: 0.20
+
+performance:
+  amp: true
+  cache: ram
